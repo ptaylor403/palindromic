@@ -11,8 +11,10 @@ def is_palindrome(phrase):
     phrase = re.sub(r'[^A-Za-z]', '', phrase)
     if reverse(phrase) == phrase:
         print("It is a palindrome! Way to go!")
+        return True
     else:
         print("It is not a palindrome. Better luck next time.")
+        return False
 
 def reverse(phrase):
     # reverse the phrase typed to check if its a palinderome
@@ -26,8 +28,11 @@ def main():
     phrase = user_input()
     if phrase != '':
         is_palindrome(phrase)
+        return True
     else:
         print("You didn't type anything!")
         print("Come back when you're ready to cooperate.")
         return False
-main()
+
+if __name__ == '__main__':
+    main()
